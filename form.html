@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .label {
+            float: left;
+            width: 150px;
+        }
+
+        .infobox {
+            width: 200px;
+        }
+
+        .error {
+            color: red;
+            padding-left: 10px;
+        }
+
+        .submit {
+            margin-left: 150px;
+            margin-top: 10px;
+            width: 150px;
+            height: 40px;
+        }
+
+        option {
+            background-color: rgb(38, 89, 199);
+            color: white;
+        }
+
+        .meal {
+            background-color: cyan;
+            color: blue;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.error').hide(); // menyembunyikan element error
+            $('option:odd').addClass('meal'); // untuk menerapkan style css .meal ke opsi bernomor ganjil dari elemen yang dipilih
+            $('.submit').click(function (event) { // untuk trigger jika di klik maka akan berjalan
+                var selectedopts = ""; // variabel opsi yang dipilih
+                var count = $('select option:selected').val();
+                if (count == 0) {
+                    $('p.result').hide();
+                    $('.error').show();
+                }
+                else {
+                    $('select option:selected').each(function () {
+                        selectedopts += $(this).text() + ",";
+                    });
+                    $('.error').hide();
+                    $('p.result').show();
+                    $('p.result').text('You have selected ' + selectedopts);
+                }
+                event.preventDefault();
+            });
+        });
+    
+    
+    </script>
+</head>
+
+
+
+
+
+<body>
+    <form>
+        <span class="label">Pilih Menu Makanan </span>
+        <select id="food" class="infobox" MULTIPLE>\
+            <option value="0" selected="0">Pilih</option>
+            <option value="1">Mie Ayam Rp 10000</option>
+            <option value="2">Nasi Goreng Rp 12000</option>
+            <option value="3">Tahu Tek Rp 15000</option>
+            <option value="4">Rujak Cingur Rp 15000</option>
+            <option value="5">Gorengan Rp 1000</option>
+        </select>
+        <p class="error">Kamu belum memilih menu makanan</p>
+        <p class="result"></p>
+        <input class="submit" type="image" value="Submit" src="submit.png">
+    </form>
+</body>
+
+</html>
