@@ -39,24 +39,24 @@
     </style>
     <script>
         $(document).ready(function () {
-            $('.error').hide(); // menyembunyikan element error
-            $('option:odd').addClass('meal'); // untuk menerapkan style css .meal ke opsi bernomor ganjil dari elemen yang dipilih
-            $('.submit').click(function (event) { // untuk trigger jika di klik maka akan berjalan
-                var selectedopts = ""; // variabel opsi yang dipilih
-                var count = $('select option:selected').val();
-                if (count == 0) {
-                    $('p.result').hide();
-                    $('.error').show();
+            $('.error').hide();                     // menyembunyikan element error
+            $('option:odd').addClass('meal');       // untuk menerapkan style css .meal ke opsi bernomor ganjil dari elemen yang dipilih
+            $('.submit').click(function (event) {   // untuk trigger jika di klik maka akan berjalan
+                var selectedopts = "";              // variabel opsi yang dipilih
+                var count = $('select option:selected').val(); // berfungsi untuk menghitung variabel opsi yang dipilih
+                if (count == 0) {  // fungsi looping untuk menentukan apa yang akan ditampilkan
+                    $('p.result').hide();   // jika tidak ada yg dipilih atau 0 maka class result disembunyikan
+                    $('.error').show();     //jika tidak ada yg dipilih atau 0 maka class error ditampilkan
                 }
                 else {
-                    $('select option:selected').each(function () {
-                        selectedopts += $(this).text() + ",";
+                    $('select option:selected').each(function () {  //fungsi looping jika ada yang dipilih 
+                        selectedopts += $(this).text() + ",";       //memunculkan teks yang dipilih
                     });
-                    $('.error').hide();
-                    $('p.result').show();
-                    $('p.result').text('You have selected ' + selectedopts);
+                    $('.error').hide();         // Jika ada yang dipilih maka clas error disembunyikan
+                    $('p.result').show();       // Jika ada yang dipilih maka clas error disembunyikan
+                    $('p.result').text('You have selected ' + selectedopts);    // memunculkan class diclass result dan memunculkan teks yang dipilih
                 }
-                event.preventDefault();
+                event.preventDefault();     //membatalkan peristiwa, atau mengembalikan ke default yang dimiliki peristiwa tersebut tidak akan terjadi lagi.
             });
         });
     
