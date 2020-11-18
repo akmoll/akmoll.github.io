@@ -1,0 +1,235 @@
+<html>
+
+<!-- Muhammad Taqi Akmaluddin_05211940000115 Seluruh bagian contact, header dan navbar setiap file html-->
+<head>
+    <title>Playstation Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+        #a1 {
+            background-image: url(https://images3.alphacoders.com/552/thumb-1920-552489.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    </style>
+    <script>
+
+    </script>
+
+</head>
+
+<!-- Sumber Form ,Style dari https://startbootstrap.com/template/shop-homepage -->
+<body>
+
+    <div id="a1" class="jumbotron text-center" style="margin-bottom:0">
+        <h1 style="color: oldlace;">Playstation Store</h1>
+        <p></p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Our Product</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="col-sm-6">
+        <p1>Dibawah ini merupakan cara pemesanan pada Playstation Store</p1>
+        <br>Untuk cara pengisian, customer mengisi data-data diri seperti nama, alamat , dan email. Kemudian memilih barang yang hendak dibeli.Kemudian customer memilih metode pembayaran yang ada.</br>
+    </div>
+
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Nama Lengkap</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="nama" name="nama" placeholder="nama lengkap">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="notel">Nomor Telepon</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="notel" name="notelpon" placeholder="nomor telepon">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="email" name="email" class="infobox">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="alamat">Alamat</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="alamat" name="alamat">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Pesanan</label>
+                </div>
+                <div class="col-75">
+                    <select id="pesanan" name="pesanan">
+                        <option value="0" selected="0">Pilih</option>
+                        <option value="ps5">Playstation 5</option>
+                        <option value="ps4">Playstation 4</option>
+                        <option value="cj">Console Joystick</option>
+                        <option value="kps5">Kaset PS5</option>
+                        <option value="kps4">Kaset PS4</option>
+                        <option value="psa">PS Accessories</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="country">Metode Pembayaran</label>
+                </div>
+                <div class="col-75">
+                    <select id="pesanan" name="pesanan">
+                        <option value="0" selected="0">Pilih</option>
+                        <option value="ovo">OVO</option>
+                        <option value="gopay">GO-pay</option>
+                        <option value="mandiri">Transfer Bank Mandiri</option>
+                        <option value="la">LinkAja</option>
+                        <option value="dana">DANA</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <footer class="bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4" style="text-align:center">
+              <h5 class="text-white" style="margin-top:50px; margin-bottom:20px">Hubungi Kami</h5>
+              <a class="text-white" href="contact.html" >Muhammad Andre Hanafi</a><br>
+              <a class="text-white" href="contact.html" >Ivan Pramudhana Bernadi</a><br>
+              <a class="text-white" href="contact.html">Muhammad Taqi Akmaluddin</a><br>
+              <br>
+            </div>
+            <div class="col-sm-4" style="text-align:center">
+              <h5 class="text-white" style="margin-top:50px; margin-bottom:20px">Produk Kami</h5>
+              <a class="text-white" href="product.html" >PlayStation 5</a><br>
+              <a class="text-white" href="product.html" >PlayStation 4</a><br>
+              <a class="text-white" href="product.html" >Downloadable Content</a><br>
+              <a class="text-white" href="product.html" >PlayStation Controller</a><br>
+              <a class="text-white" href="product.html" >Lainnya</a><br>
+              <br>
+            </div>
+            <div class="col-sm-4" style="text-align:center">
+              <h5 class="text-white" style="margin-top:50px; margin-bottom:20px">Sumber</h5>
+              <a class="text-white" href="https://startbootstrap.com/template/shop-homepage" >Start Bootstrap</a><br>
+            </div>
+          </div>
+          <div class="row" style="margin-top:25px">
+            <div class="col-sm-12" style="text-align:center">
+              <p style="color: white"><b>Pemrograman Web C &copy; 2020</b></p>
+            </div>
+          </div> 
+        </div>
+    </footer>
+
+</body>
+
+</html>
